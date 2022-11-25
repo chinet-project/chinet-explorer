@@ -1,5 +1,3 @@
-# chinet-explorer
-
 ## Block Explorer consists of two parts.
 1. Frontend, An angular application, compile and served by nginx
 2. Backend, A nodejs express api and websocket server.
