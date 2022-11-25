@@ -5,7 +5,7 @@
 
 export const environment = {
     production: false,
-    backend: 'https://chinet.smartcoinpool.net',
+    backend: 'https://pool.chinet.io',
     documentionApi: 'https://docs.chinet.io',
     decimalPlaces: 2,
     transactionPoolLimit: 5,
