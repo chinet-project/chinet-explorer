@@ -224,12 +224,12 @@ sudo systemctl nginx start
 ## Create site configuration
 
 ```
-sudo nano /etc/nginx/sites-available/chinet.smartcoinpool.net
+sudo nano /etc/nginx/sites-available/pool.chinet.io
 ```
 
 ```
 server {
-    server_name chinet.smartcoinpool.net;
+    server_name pool.chinet.io;
     gzip on;
     gzip_types *;
     gzip_min_length 1000;
@@ -255,6 +255,6 @@ server {
 
 server {
     listen 80;
-    server_name chinet.smartcoinpool.net;
+    server_name pool.chinet.io;
 }
 ```
