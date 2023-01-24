@@ -13,7 +13,7 @@
 
 // $variables
 // $background: url('assets/img/background.jpg');
-$logo: url('assets/img/logo.svg');
+$logo: url('assets/img/logo.png');
 $font: 'Open Sans', sans-serif;
 $mobileMenuIco: url('assets/img/menu.svg');
 $showIco: url('assets/img/show.svg');
@@ -109,7 +109,7 @@ app-search {
     border: none;
     border-radius: 10px;
     font-size: 14px;
-    color: #9eaacc;
+    color: #fff;
     padding-left: 47px;
     background-image: $search;
     background-repeat: no-repeat;

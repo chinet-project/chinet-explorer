@@ -35,7 +35,7 @@
     }
     .hash_block {
         font-size: 14px;
-        color: #9eaacc;
+        color: #fff;
         //font-weight: 300;
         text-transform: uppercase;
         @include max991 {
@@ -196,7 +196,7 @@
     }
     thead {
         //background-color: rgba(#fff, .2);
-        background: linear-gradient(to right, #1b3a8a, #32439f);
+        background: #005cff;
         th {
             @include max575 {
                 padding: 12px;

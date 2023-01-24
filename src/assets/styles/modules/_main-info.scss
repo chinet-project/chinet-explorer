@@ -1,7 +1,7 @@
 .main_info {
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(to right, #1b3a8a, #32439f);
+    background: #005cff;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 25px;
@@ -32,7 +32,7 @@
             align-items: center;
             height: 40px;
             font-size: 16px;
-            color: #9eaacc;
+            color: #fff;
             @include max991 {
                 flex-basis: 50%;
                 height: auto;

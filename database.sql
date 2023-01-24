@@ -196,22 +196,22 @@ END;
 $$;
 
 
-GRANT EXECUTE ON PROCEDURE purge() TO chinet;
+GRANT EXECUTE ON PROCEDURE purge() TO chinet_explorer;
 
-GRANT EXECUTE ON PROCEDURE purgeaboveheight(p_height integer) TO chinet;
+GRANT EXECUTE ON PROCEDURE purgeaboveheight(p_height integer) TO chinet_explorer;
 
-GRANT EXECUTE ON PROCEDURE update_statistics(p_startheight integer) TO chinet;
+GRANT EXECUTE ON PROCEDURE update_statistics(p_startheight integer) TO chinet_explorer;
 
-GRANT ALL ON TABLE aliases TO chinet;
+GRANT ALL ON TABLE aliases TO chinet_explorer;
 
-GRANT ALL ON TABLE alt_blocks TO chinet;
+GRANT ALL ON TABLE alt_blocks TO chinet_explorer;
 
-GRANT ALL ON TABLE blocks TO chinet;
+GRANT ALL ON TABLE blocks TO chinet_explorer;
 
-GRANT ALL ON TABLE charts TO chinet;
+GRANT ALL ON TABLE charts TO chinet_explorer;
 
-GRANT ALL ON TABLE out_info TO chinet;
+GRANT ALL ON TABLE out_info TO chinet_explorer;
 
-GRANT ALL ON TABLE pool TO chinet;
+GRANT ALL ON TABLE pool TO chinet_explorer;
 
-GRANT ALL ON TABLE transactions TO chinet;
+GRANT ALL ON TABLE transactions TO chinet_explorer;

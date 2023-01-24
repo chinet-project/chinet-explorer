@@ -1,7 +1,7 @@
 @import '../../assets/styles/base/mixins';
 .blockchain_info {
     display: flex;
-    color: #9eaacc;
+    color: #fff;
     font-size: 14px;
     white-space: nowrap;
     .daemon_state {
@@ -50,7 +50,7 @@
     }
     table {
         thead tr th {
-            color: #9eaacc;
+            color: #fff;
         }
         .hash a {
             color: #68a1ff;
@@ -117,7 +117,7 @@
         overflow-x: auto;
     }
     thead tr th {
-        color: #9eaacc;
+        color: #fff;
     }
     .heading_table {
         display: flex;
@@ -238,7 +238,7 @@
         height: 125px;
         font-size: 20px;
         font-weight: 300;
-        color: #9eaacc;
+        color: #fff;
         padding-bottom: 25px;
     }
     .pagination {

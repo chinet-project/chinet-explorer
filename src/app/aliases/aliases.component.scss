@@ -185,14 +185,14 @@
 .alias_input_search {
     background-color: rgba(#234ee2, 0.1);
     &::-webkit-input-placeholder {
-        color: #9eaacc;
+        color: #fff;
     }
     &::-moz-placeholder {
-        color: #9eaacc;
+        color: #fff;
         opacity: 1;
     }
     &::-ms-input-placeholder {
-        color: #9eaacc;
+        color: #fff;
     }
     &.desktop {
         display: flex;

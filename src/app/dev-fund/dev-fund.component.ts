@@ -14,7 +14,7 @@ export class DevFundComponent
     extends SubscriptionTracker
     implements OnInit, OnDestroy
 {
-    title: string = 'Dev Fund'
+    title: string = 'Premine'
     amount: number = 0
     @Select(VisibilityState.selectVisibilityInfo) getVisibilityInfo$: Observable<
         VisibilityInfo[]

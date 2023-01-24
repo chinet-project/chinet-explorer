@@ -5,7 +5,7 @@
 
 export const environment = {
     production: false,
-    backend: 'https://pool.chinet.io',
+    backend: 'https://api.chinet.io',
     documentionApi: 'https://docs.chinet.io',
     decimalPlaces: 2,
     transactionPoolLimit: 5,

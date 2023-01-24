@@ -1,4 +1,4 @@
-## Block Explorer consists of two parts.
+## Chinet Block Explorer consists of two parts.
 1. Frontend, An angular application, compile and served by nginx
 2. Backend, A nodejs express api and websocket server.
 
@@ -23,7 +23,7 @@ npm install
 ```
 export const environment = {
   production: false,
-  backend: 'http://10.0.0.13:8008',
+  backend: 'https://api.chinet.io',
   documentionApi: 'https://docs.chinet.io',
   decimalPlaces: 2,
   initialChartLoadDelayMs: 5000,
@@ -58,16 +58,16 @@ ___
 
 ```
 {
-    "api":"http://10.0.0.13:12111",
-    "frontEnd_api": "http://localhost:4200",
+    "api":"http://127.0.0.1:11211",
+    "frontEnd_api": "http://127.0.0.1:4200",
     "server_port": "8008",
     "auditable_wallet": {
-        "api": "http://10.0.0.13:12233"
+        "api": "http://127.0.0.1:12233"
     },
     "enableVisibilityInfo": true,
     "database": {
-        "user": "chinet",
-        "host": "10.0.0.13",
+        "user": "chinet_explorer",
+        "host": "127.0.0.1",
         "port": 5432,
         "database": "db",
         "password": "123456"
@@ -107,15 +107,15 @@ node server-pg.js
 ```
 #### Run simplewallet as a server. blockexplorer dislays wallet balance and staking information.
 ```
-./simplewallet --wallet-file my_new_wallet --password 123456 --rpc-bind-ip 10.0.0.13 --rpc-bind-port 12233 --daemon-address 10.0.0.13:12111
+./simplewallet --wallet-file my_new_wallet --password 123456 --rpc-bind-ip 127.0.0.1 --rpc-bind-port 12233 --daemon-address 127.0.0.1:11211
 ```
 # Create a new Non root User
 ```
-sudo -u createuser chinet
+sudo -u createuser chinet_explorer
 ```
 ## Add new User to the sudoers group
 ```
-sudo usermod -aG sudo chinet
+sudo usermod -aG sudo chinet_explorer
 ```
 
 # Postgresql
@@ -132,16 +132,16 @@ sudo usermod -aG sudo chinet
 sudo apt update && sudo apt install postgresql postgresql-contrib \
 sudo systemctl start postgresql
 ```
-#### Login to database as postgres user and add new user `chinet` role for postgres
+#### Login to database as postgres user and add new user `chinet_explorer` role for postgres
 ```
 sudo -u postgres psql
-CREATE ROLE chinet LOGIN SUPERUSER;
+CREATE ROLE chinet_explorer LOGIN SUPERUSER;
 ```
 #### Create a new database
 ```
 CREATE DATABASE db;
 ```
-#### Run the `database.sql` script to create the tables, stored procedures and grant permissions to these database objects for the `chinet` user
+#### Run the `database.sql` script to create the tables, stored procedures and grant permissions to these database objects for the `chinet_explorer` user
 ```
 psql -f database.sql
 ``` 
@@ -198,7 +198,7 @@ sudo apt install pgadmin4
 1. create a connection to your server, provide a master password
 2. connect to your server with the role created previously
 
-`username: chinet`
+`username: chinet_explorer`
 
 `password: 123456`
 
@@ -224,12 +224,12 @@ sudo systemctl nginx start
 ## Create site configuration
 
 ```
-sudo nano /etc/nginx/sites-available/pool.chinet.io
+sudo nano /etc/nginx/sites-available/api.chinet.io
 ```
 
 ```
 server {
-    server_name pool.chinet.io;
+    server_name api.chinet.io;
     gzip on;
     gzip_types *;
     gzip_min_length 1000;
@@ -255,6 +255,6 @@ server {
 
 server {
     listen 80;
-    server_name pool.chinet.io;
+    server_name api.chinet.io;
 }
 ```

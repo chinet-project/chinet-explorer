@@ -88,7 +88,7 @@ header {
             padding: 0 15px;
             //cursor: pointer;
             background-color: #2b3768;
-            color: #9eaacc;
+            color: #fff;
             @include unSelect;
             @include max575 {
                 padding: 0 10px;
@@ -99,7 +99,7 @@ header {
             }
             &.active {
                 color: #fff;
-                background: linear-gradient(to right, #1b3a8a, #32439f);
+                background: #005cff;
                 font-weight: 600;
             }
         }
